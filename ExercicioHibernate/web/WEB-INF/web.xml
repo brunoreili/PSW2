@@ -4,9 +4,17 @@
         <servlet-name>SalvarPincel</servlet-name>
         <servlet-class>SalvarPincel</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CarregaPencel</servlet-name>
+        <servlet-class>CarregaPencel</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SalvarPincel</servlet-name>
         <url-pattern>/SalvarPincel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarregaPencel</servlet-name>
+        <url-pattern>/CarregaPencel</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
