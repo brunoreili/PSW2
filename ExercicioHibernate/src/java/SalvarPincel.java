@@ -33,15 +33,20 @@ public class SalvarPincel extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            Pincel p1 = new Pincel();
-            p1.setCor("azul");
-            p1.setFabricante("pilot");
-            p1.setNum_serie(10254);
+                Fabricante f = new Fabricante();
+                f.setNome("Pilot");
+                f.setCnpj("0123456789");
             
+                Pincel p1 = new Pincel();
+                p1.setCor("azul");
+                p1.setFabricante(f);
+                p1.setNum_serie(10254);
+                           
             Session sessao = HibernateUtil.getSessionFactory().openSession();
             
             Transaction tx = sessao.beginTransaction();
             
+            sessao.save(f); //É necessário salvar primeiro o Fabricante para depois o Pincel
             sessao.save(p1);
             sessao.flush();
             

@@ -48,7 +48,7 @@ public class CarregaPencel extends HttpServlet {
             
             out.println("Dados do pincel 0: ");
             out.println("Cor: " + pincel0.getCor());
-            out.println("Fabricante: " + pincel0.getFabricante());
+            out.println("Fabricante: " + pincel0.getFabricante().getNome());
             out.println("Numero de Série: " + pincel0.getNum_serie());
             
             
