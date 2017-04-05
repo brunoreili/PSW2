@@ -1,10 +1,10 @@
 package entidade;
 
 public class Pincel {
-
+    
     private int identificador;
     private String cor;
-    private Fabricante fabricante;  
+    //private Fabricante fabricante;
     private int num_serie;
 
     public int getIdentificador() {
@@ -13,7 +13,7 @@ public class Pincel {
     public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
-    
+
     public String getCor() {
         return cor;
     }
@@ -21,13 +21,14 @@ public class Pincel {
         this.cor = cor;
     }
 
-    public Fabricante getFabricante() {
+   /* public Fabricante getFabricante() {
         return fabricante;
     }
+
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
-
+*/
     public int getNum_serie() {
         return num_serie;
     }
