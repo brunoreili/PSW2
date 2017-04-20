@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Meu teste js</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    
+    <body ng-app="minhaApp" ng-controller="meuCtrl">
+        
+        <input type="text" ng-model="texto"/>
+        <br/>
+        
+        <div id="divTeste">
+            <h1>Teste Legal: {{texto}}</h1>
+            
+            O valor de teste 2 eh: {{teste2}}
+        </div>
+    </body>
+    
+    <script>
+        var app = angular.module('minhaApp', []);
+        app.controller('meuCtrl', function($scope) {
+            $scope.texto = "###";
+            $scope.teste2 = "batata " + $scope.texto;
+        }); 
+    </script>    
+</html>
